@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - ASR Mindful Time Tracker</title>
+  <meta name="description" content="Privacy Policy for ASR Mindful Time Tracker app. Learn how your data is protected, stored offline-first, and kept 100% private." />
+
+  <!-- Google Fonts: Inter + Plus Jakarta Sans + Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,400&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-[#FAFAF9] text-slate-800 antialiased font-sans flex flex-col min-h-screen">
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-40 bg-[#FAFAF9]/90 backdrop-blur-md border-b border-slate-200/80">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5 text-slate-900 font-extrabold text-lg tracking-tight hover:opacity-80 transition">
+        <div class="w-8 h-8 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold text-base shadow-sm">
+          A
+        </div>
+        <span>ASR</span>
+      </a>
+
+      <div class="flex items-center gap-3">
+        <!-- Language Switcher -->
+        <div class="flex items-center p-1 rounded-xl bg-slate-100 border border-slate-200 text-xs font-bold">
+          <button id="lang-en-btn" class="px-3 py-1 rounded-lg bg-slate-900 text-white shadow-sm transition">EN</button>
+          <button id="lang-ru-btn" class="px-3 py-1 rounded-lg text-slate-600 hover:text-slate-900 transition">RU</button>
+        </div>
+        <a href="index.html" class="text-xs font-bold text-slate-600 hover:text-slate-900 transition hidden sm:inline-flex items-center gap-1">
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+          <span id="back-nav-text">Back to Home</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="flex-grow py-12 sm:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      
+      <!-- =========================================================================
+           ENGLISH VERSION (Default for App Stores & Global Users)
+           ========================================================================= -->
+      <article id="doc-en" class="space-y-8 bg-white p-6 sm:p-12 rounded-3xl border border-slate-200/90 shadow-sm">
+        <div class="border-b border-slate-100 pb-6 space-y-2">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-semibold">
+            <span>Official Legal Document</span>
+          </div>
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Privacy Policy</h1>
+          <p class="text-xs text-slate-500">Effective date: August 31, 2026 · Last updated: August 31, 2026</p>
+        </div>
+
+        <section class="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+          <p>
+            Welcome to <strong>ASR</strong> ("we", "our", or "us"). We built the ASR Mindful Time Tracker application with a foundational commitment to your personal privacy. This Privacy Policy explains how our application collects, uses, and safeguards your information when you use our mobile application on iOS and Android.
+          </p>
+          <p>
+            <strong>Summary:</strong> We do not sell your personal data. We do not display advertisements. We do not track your activity across other apps or websites. In the Free version, your time logs and photos remain entirely on your personal device.
+          </p>
+        </section>
+
+        <!-- 1. Offline-First & Data Storage -->
+        <section class="space-y-3 pt-4 border-t border-slate-100">
+          <h2 class="text-xl font-bold text-slate-900">1. Information We Collect and How It Is Stored</h2>
+          
+          <h3 class="text-base font-semibold text-slate-800 pt-2">A. Free Edition (100% Offline-First)</h3>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            By default, ASR operates as an offline-first application. All information you create — including time logs, activity categories, goals, notes, and attached photographs — is stored exclusively in your device's local encrypted database (Isar Database). This data never leaves your smartphone and is not transmitted to our servers.
+          </p>
+
+          <h3 class="text-base font-semibold text-slate-800 pt-2">B. ASR PRO Edition (Optional Cloud Sync)</h3>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            If you voluntarily choose to subscribe to ASR PRO and enable cloud backup:
+          </p>
+          <ul class="list-disc list-inside space-y-1.5 text-slate-600 text-sm sm:text-base pl-2">
+            <li><strong>Account Information:</strong> Your email address and encrypted authentication credentials (managed via Supabase Auth).</li>
+            <li><strong>Cloud Backup Data:</strong> Your categorized time entries, intentions, journal notes, and photos, synchronized to our secure cloud database (Supabase / PostgreSQL) protected by Row-Level Security (RLS).</li>
+            <li><strong>Subscription Status:</strong> Receipt and entitlement tokens processed through Apple App Store (In-App Purchases) or Google Play Billing to grant PRO access.</li>
+          </ul>
+        </section>
+
+        <!-- 2. Device Permissions -->
+        <section class="space-y-3 pt-4 border-t border-slate-100">
+          <h2 class="text-xl font-bold text-slate-900">2. Device Permissions and Usage</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            ASR may request specific device permissions only to enable core mindful features:
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-slate-600 text-sm sm:text-base pl-2">
+            <li><strong>Camera & Photo Library:</strong> Used strictly when you choose to take or attach a photo to your activity timeline (e.g., photographing a book you are reading or a project milestone). We do not scan, analyze, or use your photos for any other purpose.</li>
+            <li><strong>Notifications:</strong> Used optionally to deliver mindful reminders, prayer times, or daily intention check-ins that you have scheduled.</li>
+          </ul>
+        </section>
+
+        <!-- 3. Third-Party Service Providers -->
+        <section class="space-y-3 pt-4 border-t border-slate-100">
+          <h2 class="text-xl font-bold text-slate-900">3. Third-Party Services</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            We only integrate trusted industry-standard infrastructure providers strictly required to deliver app functionality:
+          </p>
+          <ul class="list-disc list-inside space-y-1.5 text-slate-600 text-sm sm:text-base pl-2">
+            <li><strong>Supabase (PostgreSQL & Storage):</strong> Secure backend database and storage for PRO cloud synchronization.</li>
+            <li><strong>Apple App Store / Google Play Store:</strong> Secure payment processing for PRO subscriptions. We do not collect or store your credit card or payment credentials.</li>
+          </ul>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed pt-1">
+            We <strong>do not</strong> use third-party advertising SDKs (such as Google AdMob, Unity Ads, or Facebook Audience Network) and do not sell data to data brokers.
+          </p>
+        </section>
+
+        <!-- 4. Data Retention & Account Deletion -->
+        <section class="space-y-3 pt-4 border-t border-slate-100">
+          <h2 class="text-xl font-bold text-slate-900">4. Data Retention and Account Deletion (App Store & GDPR Compliant)</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            You retain absolute ownership of all your data at all times:
+          </p>
+          <ul class="list-disc list-inside space-y-1.5 text-slate-600 text-sm sm:text-base pl-2">
+            <li><strong>Local Data:</strong> You can clear all local application data at any time from your device's settings or by uninstalling the application.</li>
+            <li><strong>Cloud Account & Data Deletion:</strong> In compliance with Apple App Store Guideline 5.1.1 and global privacy laws, you can delete your account and all associated cloud data directly within the app under <em>Settings → Profile → Delete Account</em>, or by contacting us at our support email. Upon deletion, all your cloud records and photos are permanently purged.</li>
+          </ul>
+        </section>
+
+        <!-- 5. Children's Privacy -->
+        <section class="space-y-3 pt-4 border-t border-slate-100">
+          <h2 class="text-xl font-bold text-slate-900">5. Children's Privacy (COPPA & GDPR)</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            ASR does not knowingly collect personal identifiable information from children under 13 (or 16 in the European Union). If you believe that a child has provided us with personal information, please contact us immediately, and we will promptly remove such records.
+          </p>
+        </section>
+
+        <!-- 6. Contact Information -->
+        <section class="space-y-3 pt-4 border-t border-slate-100">
+          <h2 class="text-xl font-bold text-slate-900">6. Contact Us</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            If you have questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact us:
+          </p>
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 text-sm text-slate-700 space-y-1">
+            <p><strong>App:</strong> ASR Mindful Time Tracker</p>
+            <p><strong>Developer:</strong> Umar Eldiyarov</p>
+            <p><strong>Email:</strong> <a href="mailto:support@asrapp.com" class="text-slate-900 underline font-semibold">support@asrapp.com</a> / <a href="https://github.com/umareld1yarov" class="text-slate-900 underline font-semibold" target="_blank">github.com/umareld1yarov</a></p>
+          </div>
+        </section>
+      </article>
+
+      <!-- =========================================================================
+           RUSSIAN VERSION
+           ========================================================================= -->
+      <article id="doc-ru" class="space-y-8 bg-white p-6 sm:p-12 rounded-3xl border border-slate-200/90 shadow-sm hidden">
+        <div class="border-b border-slate-100 pb-6 space-y-2">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-semibold">
+            <span>Официальный документ</span>
+          </div>
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Политика конфиденциальности</h1>
+          <p class="text-xs text-slate-500">Дата вступления в силу: 31 августа 2026 г. · Последнее обновление: 31 августа 2026 г.</p>
+        </div>
+
+        <section class="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+          <p>
+            Добро пожаловать в <strong>ASR</strong> («мы», «наш» или «приложение»). Мы создали приложение ASR Mindful Time Tracker с фундаментальным уважением к вашей личной приватности. Настоящая Политика конфиденциальности разъясняет, как приложение обрабатывает и защищает ваши данные на мобильных устройствах под управлением iOS и Android.
+          </p>
+          <p>
+            <strong>Краткая суть:</strong> Мы не продаем ваши данные, не показываем рекламу и не отслеживаем ваши действия в других приложениях или на сайтах. В бесплатной версии вся история вашего времени и фотографии хранятся исключительно на вашем личном телефоне.
+          </p>
+        </section>
+
+        <!-- 1. Offline-First & Data Storage -->
+        <section class="space-y-3 pt-4 border-t border-slate-100">
+          <h2 class="text-xl font-bold text-slate-900">1. Какую информацию мы собираем и как она хранится</h2>
+          
+          <h3 class="text-base font-semibold text-slate-800 pt-2">А. Free Версия (100% Офлайн-хранение)</h3>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            По умолчанию ASR работает по принципу Offline-First. Все данные, которые вы создаете — записи времени, категории, цели, заметки и прикрепленные фотографии — хранятся исключительно в зашифрованной локальной базе данных на вашем смартфоне (база данных Isar). Эти данные никогда не покидают ваше устройство и не передаются на внешние серверы.
+          </p>
+
+          <h3 class="text-base font-semibold text-slate-800 pt-2">Б. ASR PRO (Облачная синхронизация по желанию)</h3>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Если вы добровольно оформляете подписку ASR PRO и включаете облачный бэкап:
+          </p>
+          <ul class="list-disc list-inside space-y-1.5 text-slate-600 text-sm sm:text-base pl-2">
+            <li><strong>Учетная запись:</strong> Адрес электронной почты и зашифрованные токены авторизации (через сервис Supabase Auth).</li>
+            <li><strong>Облачная копия:</strong> Ваши записи времени, цели, заметки и фотографии синхронизируются в защищенную облачную базу данных (Supabase / PostgreSQL), закрытую политиками Row-Level Security (RLS).</li>
+            <li><strong>Статус подписки:</strong> Чеки и токены покупки, обрабатываемые через Apple App Store или Google Play Billing для подтверждения статуса PRO.</li>
+          </ul>
+        </section>
+
+        <!-- 2. Device Permissions -->
+        <section class="space-y-3 pt-4 border-t border-slate-100">
+          <h2 class="text-xl font-bold text-slate-900">2. Разрешения устройства</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            ASR запрашивает доступ к функциям устройства исключительно для обеспечения работы приложения:
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-slate-600 text-sm sm:text-base pl-2">
+            <li><strong>Камера и Галерея:</strong> Запрашиваются только тогда, когда вы хотите сделать снимок или прикрепить фото к записи дня (например, фото книги или тренировки). Мы не сканируем и не передаем ваши фотографии посторонним лицам.</li>
+            <li><strong>Уведомления:</strong> Используются для мягких напоминаний об осознанности, времени намаза или проверке ежедневных целей.</li>
+          </ul>
+        </section>
+
+        <!-- 3. Third-Party Service Providers -->
+        <section class="space-y-3 pt-4 border-t border-slate-100">
+          <h2 class="text-xl font-bold text-slate-900">3. Сторонние сервисы</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Мы используем только проверенные отраслевые сервисы, необходимые для технической работы приложения:
+          </p>
+          <ul class="list-disc list-inside space-y-1.5 text-slate-600 text-sm sm:text-base pl-2">
+            <li><strong>Supabase:</strong> Защищенная облачная инфраструктура для авторизации и хранения бэкапа PRO-пользователей.</li>
+            <li><strong>Apple App Store / Google Play Store:</strong> Обработка платежей за подписку. Мы не имеем доступа к данным ваших банковских карт.</li>
+          </ul>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed pt-1">
+            Мы <strong>не используем</strong> рекламные трекеры (AdMob, Facebook Pixel и др.) и никогда не продаем данные аналитическим или рекламным брокерам.
+          </p>
+        </section>
+
+        <!-- 4. Data Retention & Account Deletion -->
+        <section class="space-y-3 pt-4 border-t border-slate-100">
+          <h2 class="text-xl font-bold text-slate-900">4. Удаление данных и аккаунта</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Вы в любой момент обладаете полным контролем над своими данными:
+          </p>
+          <ul class="list-disc list-inside space-y-1.5 text-slate-600 text-sm sm:text-base pl-2">
+            <li><strong>Локальные данные:</strong> Вы можете удалить все данные приложения через настройки телефона или удалив само приложение.</li>
+            <li><strong>Удаление облачного аккаунта:</strong> В соответствии с требованиями Apple App Store (Guideline 5.1.1) и законами о защите данных, вы можете удалить свой облачный аккаунт и все сохраненные данные прямо внутри приложения: <em>Профиль → Настройки → Удалить аккаунт</em>. При удалении все облачные записи и фото стираются безвозвратно.</li>
+          </ul>
+        </section>
+
+        <!-- 5. Children's Privacy -->
+        <section class="space-y-3 pt-4 border-t border-slate-100">
+          <h2 class="text-xl font-bold text-slate-900">5. Конфиденциальность детей</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Приложение не предназначено для сбора личной информации у детей младше 13 (в ЕС — 16) лет без согласия родителей. Если вам стало известно о подобном факте, свяжитесь с нами для удаления данных.
+          </p>
+        </section>
+
+        <!-- 6. Contact Information -->
+        <section class="space-y-3 pt-4 border-t border-slate-100">
+          <h2 class="text-xl font-bold text-slate-900">6. Контакты</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            По всем вопросам касательно политики конфиденциальности или обработки данных вы можете связаться с разработчиком:
+          </p>
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 text-sm text-slate-700 space-y-1">
+            <p><strong>Приложение:</strong> ASR Mindful Time Tracker</p>
+            <p><strong>Разработчик:</strong> Умар Элдияров (Umar Eldiyarov)</p>
+            <p><strong>Email:</strong> <a href="mailto:support@asrapp.com" class="text-slate-900 underline font-semibold">support@asrapp.com</a> / <a href="https://github.com/umareld1yarov" class="text-slate-900 underline font-semibold" target="_blank">github.com/umareld1yarov</a></p>
+          </div>
+        </section>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-200/80 py-8 text-center text-xs text-slate-500">
+    <div class="max-w-4xl mx-auto px-4 space-y-3">
+      <div class="flex items-center justify-center gap-6 font-semibold text-slate-600">
+        <a href="index.html" class="hover:text-slate-900 transition">Главная / Home</a>
+        <a href="privacy.html" class="text-slate-900 font-bold">Privacy Policy</a>
+        <a href="terms.html" class="hover:text-slate-900 transition">Terms of Service</a>
+      </div>
+      <p>© 2026 ASR Mindful Time Tracker. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    const enBtn = document.getElementById('lang-en-btn');
+    const ruBtn = document.getElementById('lang-ru-btn');
+    const docEn = document.getElementById('doc-en');
+    const docRu = document.getElementById('doc-ru');
+    const backNav = document.getElementById('back-nav-text');
+
+    function setDocLang(lang) {
+      if (lang === 'ru') {
+        docEn.classList.add('hidden');
+        docRu.classList.remove('hidden');
+        ruBtn.classList.add('bg-slate-900', 'text-white', 'shadow-sm');
+        ruBtn.classList.remove('text-slate-600', 'hover:text-slate-900');
+        enBtn.classList.remove('bg-slate-900', 'text-white', 'shadow-sm');
+        enBtn.classList.add('text-slate-600', 'hover:text-slate-900');
+        if (backNav) backNav.textContent = 'На главную';
+      } else {
+        docRu.classList.add('hidden');
+        docEn.classList.remove('hidden');
+        enBtn.classList.add('bg-slate-900', 'text-white', 'shadow-sm');
+        enBtn.classList.remove('text-slate-600', 'hover:text-slate-900');
+        ruBtn.classList.remove('bg-slate-900', 'text-white', 'shadow-sm');
+        ruBtn.classList.add('text-slate-600', 'hover:text-slate-900');
+        if (backNav) backNav.textContent = 'Back to Home';
+      }
+    }
+
+    enBtn.addEventListener('click', () => setDocLang('en'));
+    ruBtn.addEventListener('click', () => setDocLang('ru'));
+  </script>
+</body>
+</html>

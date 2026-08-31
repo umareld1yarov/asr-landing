@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Fastlane Metadata -->
+  <title>ASR — Осознанный непрерывный трекер времени и баланса жизни</title>
+  <meta name="title" content="ASR — Осознанный непрерывный трекер времени и баланса жизни">
+  <meta name="description" content="ASR — спокойный offline-first трекер времени без кнопок старт/стоп. Непрерывный учет 24/7, фото-дневник и круговая аналитика 9 сфер жизни.">
+  <meta name="keywords" content="трекер времени, учет времени, продуктивность, баланс жизни, осознанность, тайм трекер, asr app">
+  <meta name="author" content="ASR Team">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ASR — Осознанный непрерывный трекер времени">
+  <meta property="og:description" content="Время — это то, из чего соткана жизнь. Проживайте каждую минуту бережно и осознанно.">
+  <meta property="og:image" content="assets/images/real_screen_focus.png">
+
+  <!-- Schema.org JSON-LD Structured Data for AI & Search Engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ASR",
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "ProductivityApplication",
+    "description": "Mindful offline-first continuous time tracker and life balance application.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "Continuous 24/7 time flow tracking",
+      "Daily photo memories timeline",
+      "9-sphere life balance analytics",
+      "Retroactive Split Entry tool",
+      "Offline-first with local encryption"
+    ]
+  }
+  </script>
+
+  <!-- Tailwind CSS & Google Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Minimalist Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          },
+          colors: {
+            brand: {
+              50: '#F8FAFC',
+              100: '#F1F5F9',
+              500: '#0F172A',
+              600: '#0284C7',
+              700: '#0F766E',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-[#FAFAF9] text-slate-900 font-sans antialiased overflow-x-hidden relative selection:bg-slate-900 selection:text-white">
+
+  <!-- Soft Ambient Background Gradients -->
+  <div class="fixed top-0 left-1/3 w-[600px] h-[600px] ambient-light-glow pointer-events-none -z-10 blur-3xl"></div>
+  <div class="fixed top-1/2 right-10 w-[500px] h-[500px] ambient-warm-glow pointer-events-none -z-10 blur-3xl"></div>
+
+  <!-- =========================================================================
+       1. HEADER / NAVIGATION
+       ========================================================================= -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/80 transition-all">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-2xl bg-slate-900 flex items-center justify-center text-white font-extrabold text-lg shadow-sm">
+          A
+        </div>
+        <div>
+          <span class="font-extrabold text-xl tracking-tight text-slate-900">ASR</span>
+          <span class="text-xs text-slate-500 block -mt-1 font-medium">Mindful Flow</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <a href="#philosophy" data-i18n="nav_philosophy" class="hover:text-slate-900 transition">Философия</a>
+        <a href="#features" data-i18n="nav_features" class="hover:text-slate-900 transition">Возможности</a>
+        <a href="#spheres" data-i18n="nav_spheres" class="hover:text-slate-900 transition">9 Сфер</a>
+        <a href="#pro" data-i18n="nav_pro" class="hover:text-slate-900 transition">ASR PRO</a>
+        <a href="#faq" data-i18n="nav_faq" class="hover:text-slate-900 transition">Вопросы и ответы</a>
+      </nav>
+
+      <!-- Right Controls -->
+      <div class="hidden sm:flex items-center gap-4">
+        <!-- Language Switcher -->
+        <div class="flex items-center p-1 rounded-xl bg-slate-100 border border-slate-200 text-xs font-bold">
+          <button data-lang="ru" class="lang-btn px-2.5 py-1 rounded-lg transition bg-slate-900 text-white shadow-sm">RU</button>
+          <button data-lang="en" class="lang-btn px-2.5 py-1 rounded-lg transition text-slate-600 hover:text-slate-900">EN</button>
+        </div>
+
+        <!-- Download Button -->
+        <a href="#download" data-i18n="nav_download" class="btn-dark px-5 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2">
+          <i data-lucide="arrow-down-to-line" class="w-4 h-4"></i>
+          <span>Скачать ASR</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-xl text-slate-600 hover:text-slate-900 bg-slate-100 border border-slate-200">
+        <i data-lucide="menu" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 pt-3 pb-6 bg-white border-b border-slate-200 flex flex-col gap-4">
+      <a href="#philosophy" data-i18n="nav_philosophy" class="text-slate-700 font-semibold py-1">Философия</a>
+      <a href="#features" data-i18n="nav_features" class="text-slate-700 font-semibold py-1">Возможности</a>
+      <a href="#spheres" data-i18n="nav_spheres" class="text-slate-700 font-semibold py-1">9 Сфер</a>
+      <a href="#pro" data-i18n="nav_pro" class="text-slate-700 font-semibold py-1">ASR PRO</a>
+      <a href="#faq" data-i18n="nav_faq" class="text-slate-700 font-semibold py-1">Вопросы и ответы</a>
+      <div class="flex items-center justify-between pt-3 border-t border-slate-100">
+        <div class="flex items-center p-1 rounded-xl bg-slate-100 border border-slate-200 text-xs font-bold">
+          <button data-lang="ru" class="lang-btn px-3 py-1 rounded-lg">RU</button>
+          <button data-lang="en" class="lang-btn px-3 py-1 rounded-lg">EN</button>
+        </div>
+        <a href="#download" data-i18n="nav_download" class="btn-dark px-4 py-2 rounded-xl text-xs font-bold">Скачать</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. HERO SECTION
+       ========================================================================= -->
+  <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-32">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Hero Copy -->
+        <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+          
+          <!-- Gentle Badge -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-xs sm:text-sm font-semibold shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            <span data-i18n="hero_badge">Осознанность и ценность каждого дня</span>
+          </div>
+
+          <!-- Main Headings -->
+          <div class="space-y-3">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">
+              <span data-i18n="hero_title_1" class="block">Время — это то, из чего соткана жизнь.</span>
+              <span data-i18n="hero_title_2" class="block text-slate-600 font-serif italic font-normal text-3xl sm:text-4xl lg:text-5xl mt-2">Проживайте каждую минуту бережно.</span>
+            </h1>
+          </div>
+
+          <!-- Subtitle -->
+          <p data-i18n="hero_desc" class="text-base sm:text-lg text-slate-600 font-normal max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            ASR — это спокойный, непрерывный трекер времени, созданный для внутренней гармонии и ясности. Без стресса, без кнопок «Стоп» — только честный и легкий взгляд на то, куда уходят ваши дни.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#download" class="btn-dark w-full sm:w-auto px-8 py-4 rounded-2xl font-bold text-sm sm:text-base flex items-center justify-center gap-3">
+              <i data-lucide="download" class="w-4 h-4"></i>
+              <span data-i18n="hero_cta_download">Скачать для iOS и Android</span>
+            </a>
+            <a href="#philosophy" class="btn-soft w-full sm:w-auto px-7 py-4 rounded-2xl font-semibold text-sm sm:text-base flex items-center justify-center gap-2">
+              <i data-lucide="compass" class="w-4 h-4 text-slate-600"></i>
+              <span data-i18n="hero_cta_learn">Узнать философию ASR</span>
+            </a>
+          </div>
+
+          <!-- Key Values Bar -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-slate-200/80">
+            <div class="light-card p-4 rounded-2xl text-center lg:text-left">
+              <div data-i18n="stat_1_val" class="text-lg font-extrabold text-slate-900">Непрерывный</div>
+              <div data-i18n="stat_1_lbl" class="text-xs text-slate-500 mt-0.5">Плавный поток 24/7</div>
+            </div>
+            <div class="light-card p-4 rounded-2xl text-center lg:text-left">
+              <div data-i18n="stat_2_val" class="text-lg font-extrabold text-slate-900">100% Приватно</div>
+              <div data-i18n="stat_2_lbl" class="text-xs text-slate-500 mt-0.5">Хранится на телефоне</div>
+            </div>
+            <div class="light-card p-4 rounded-2xl text-center lg:text-left">
+              <div data-i18n="stat_3_val" class="text-lg font-extrabold text-slate-900">9 Сфер</div>
+              <div data-i18n="stat_3_lbl" class="text-xs text-slate-500 mt-0.5">Гармония жизни</div>
+            </div>
+            <div class="light-card p-4 rounded-2xl text-center lg:text-left">
+              <div data-i18n="stat_4_val" class="text-lg font-extrabold text-slate-900">8 Языков</div>
+              <div data-i18n="stat_4_lbl" class="text-xs text-slate-500 mt-0.5">По всему миру</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero: Real Smartphone Screenshot in Full Glory -->
+        <div class="lg:col-span-5 flex justify-center items-center">
+          <div class="device-frame-container">
+            <div class="device-screen-wrapper">
+              <img 
+                src="assets/images/real_screen_focus.png" 
+                alt="ASR Application Focus Screen" 
+                class="device-screen-img"
+              />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. PHILOSOPHY SECTION
+       ========================================================================= -->
+  <section id="philosophy" class="py-20 bg-white border-t border-b border-slate-200/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-xs font-semibold">
+          <span data-i18n="phil_badge">Философия времени</span>
+        </div>
+        <h2 data-i18n="phil_title" class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-snug">
+          Время нельзя остановить или накопить. Но им можно жить осознанно.
+        </h2>
+        <p data-i18n="phil_subtitle" class="text-slate-600 text-base sm:text-lg leading-relaxed">
+          Обычные приложения превращают жизнь в секундомер с кнопками «Старт» и «Стоп». Но жизнь никогда не замирает — она непрерывно перетекает от работы к молитве, от учебы к спорту, от важных дел к отдыху и теплому общению с семьей.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="light-card p-8 rounded-3xl space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-slate-100 flex items-center justify-center text-slate-800">
+            <i data-lucide="feather" class="w-6 h-6"></i>
+          </div>
+          <h3 data-i18n="phil_card_1_title" class="text-lg font-bold text-slate-900">Без стресса и суеты</h3>
+          <p data-i18n="phil_card_1_desc" class="text-sm text-slate-600 leading-relaxed">
+            Вам больше не нужно бояться забыть нажать «Стоп». Когда одно дело сменяется другим, просто нажмите новую категорию — время течёт само.
+          </p>
+        </div>
+
+        <div class="light-card p-8 rounded-3xl space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-slate-100 flex items-center justify-center text-slate-800">
+            <i data-lucide="camera" class="w-6 h-6"></i>
+          </div>
+          <h3 data-i18n="phil_card_2_title" class="text-lg font-bold text-slate-900">Хроника ваших ярких моментов</h3>
+          <p data-i18n="phil_card_2_desc" class="text-sm text-slate-600 leading-relaxed">
+            Прикрепляйте фото, заметки и мысли к записям дня. ASR превращается в душевный памятный дневник ваших побед и тихих радостей.
+          </p>
+        </div>
+
+        <div class="light-card p-8 rounded-3xl space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-slate-100 flex items-center justify-center text-slate-800">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <h3 data-i18n="phil_card_3_title" class="text-lg font-bold text-slate-900">Спокойствие и полная приватность</h3>
+          <p data-i18n="phil_card_3_desc" class="text-sm text-slate-600 leading-relaxed">
+            Ваша жизнь принадлежит только вам. ASR работает полностью оффлайн во встроенной локальной базе без рекламы и навязчивых уведомлений.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. FEATURES SECTION
+       ========================================================================= -->
+  <section id="features" class="py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-xs font-semibold">
+          <span data-i18n="feat_badge">Продуманная простота</span>
+        </div>
+        <h2 data-i18n="feat_title" class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
+          Всё для того, чтобы слышать себя и ценить свой день
+        </h2>
+        <p data-i18n="feat_subtitle" class="text-slate-600 text-base sm:text-lg">
+          Легкие, интуитивные инструменты для поддержки ваших привычек, отдыха и внутреннего баланса.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="light-card p-7 rounded-3xl space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-800">
+            <i data-lucide="clock" class="w-5 h-5"></i>
+          </div>
+          <h3 data-i18n="feat_1_title" class="text-base font-bold text-slate-900">Непрерывный ритм 24/7</h3>
+          <p data-i18n="feat_1_desc" class="text-sm text-slate-600 leading-relaxed">
+            Переключение в одно касание. Полная и честная картина всех 24 часов вашего дня без белых пятен и пропусков.
+          </p>
+        </div>
+
+        <div class="light-card p-7 rounded-3xl space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-800">
+            <i data-lucide="image" class="w-5 h-5"></i>
+          </div>
+          <h3 data-i18n="feat_2_title" class="text-base font-bold text-slate-900">Фото-хронология и дневник</h3>
+          <p data-i18n="feat_2_desc" class="text-sm text-slate-600 leading-relaxed">
+            Сделайте снимок прочитанной книги, спортзала или семейного ужина — сохраните контекст момента на всю жизнь.
+          </p>
+        </div>
+
+        <div class="light-card p-7 rounded-3xl space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-800">
+            <i data-lucide="pie-chart" class="w-5 h-5"></i>
+          </div>
+          <h3 data-i18n="feat_3_title" class="text-base font-bold text-slate-900">Гармоничная круговая аналитика</h3>
+          <p data-i18n="feat_3_desc" class="text-sm text-slate-600 leading-relaxed">
+            Красивая и спокойная диаграмма покажет баланс духовности, работы, здоровья и семьи за день, месяц или год.
+          </p>
+        </div>
+
+        <div class="light-card p-7 rounded-3xl space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-800">
+            <i data-lucide="scissors" class="w-5 h-5"></i>
+          </div>
+          <h3 data-i18n="feat_4_title" class="text-base font-bold text-slate-900">Бережное разделение (Split Entry)</h3>
+          <p data-i18n="feat_4_desc" class="text-sm text-slate-600 leading-relaxed">
+            Забыли переключить таймер перед сном? Легким движением ползунка разделите сессию на работу и сон за пару секунд.
+          </p>
+        </div>
+
+        <div class="light-card p-7 rounded-3xl space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-800">
+            <i data-lucide="flag" class="w-5 h-5"></i>
+          </div>
+          <h3 data-i18n="feat_5_title" class="text-base font-bold text-slate-900">Цели и намерения</h3>
+          <p data-i18n="feat_5_desc" class="text-sm text-slate-600 leading-relaxed">
+            Ставьте мягкие ориентиры по часам на спорт, чтение или духовную практику. Наблюдайте за плавным ростом прогресса.
+          </p>
+        </div>
+
+        <div class="light-card p-7 rounded-3xl space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-800">
+            <i data-lucide="wifi-off" class="w-5 h-5"></i>
+          </div>
+          <h3 data-i18n="feat_6_title" class="text-base font-bold text-slate-900">100% Offline-First</h3>
+          <p data-i18n="feat_6_desc" class="text-sm text-slate-600 leading-relaxed">
+            Мгновенно работает в самолёте, горах или без интернета. Ваши данные всегда с вами в любую секунду.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. 9 SPHERES SECTION
+       ========================================================================= -->
+  <section id="spheres" class="py-20 bg-white border-t border-b border-slate-200/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-xs font-semibold">
+          <span data-i18n="spheres_badge">Баланс всех сфер</span>
+        </div>
+        <h2 data-i18n="spheres_title" class="text-3xl sm:text-4xl font-extrabold text-slate-900">
+          9 Опор гармоничной жизни
+        </h2>
+        <p data-i18n="spheres_subtitle" class="text-slate-600 text-base">
+          ASR помогает бережно распределять внимание между главными ценностями человека.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+        
+        <div class="light-card p-6 rounded-2xl flex items-start gap-4">
+          <span class="text-3xl shrink-0 p-2 rounded-xl bg-slate-50 border border-slate-100">🕌</span>
+          <div>
+            <h4 data-i18n="cat_religion" class="font-bold text-base text-slate-900">Религия и Духовность</h4>
+            <p data-i18n="cat_religion_desc" class="text-xs text-slate-500 mt-1">Молитва, душевный покой, размышления и вера</p>
+          </div>
+        </div>
+
+        <div class="light-card p-6 rounded-2xl flex items-start gap-4">
+          <span class="text-3xl shrink-0 p-2 rounded-xl bg-slate-50 border border-slate-100">💼</span>
+          <div>
+            <h4 data-i18n="cat_work" class="font-bold text-base text-slate-900">Работа и Проекты</h4>
+            <p data-i18n="cat_work_desc" class="text-xs text-slate-500 mt-1">Профессиональный фокус, карьера и созидание</p>
+          </div>
+        </div>
+
+        <div class="light-card p-6 rounded-2xl flex items-start gap-4">
+          <span class="text-3xl shrink-0 p-2 rounded-xl bg-slate-50 border border-slate-100">📚</span>
+          <div>
+            <h4 data-i18n="cat_growth" class="font-bold text-base text-slate-900">Развитие и Знания</h4>
+            <p data-i18n="cat_growth_desc" class="text-xs text-slate-500 mt-1">Чтение книг, новые навыки и внутренняя мудрость</p>
+          </div>
+        </div>
+
+        <div class="light-card p-6 rounded-2xl flex items-start gap-4">
+          <span class="text-3xl shrink-0 p-2 rounded-xl bg-slate-50 border border-slate-100">💰</span>
+          <div>
+            <h4 data-i18n="cat_finance" class="font-bold text-base text-slate-900">Финансы и Ресурсы</h4>
+            <p data-i18n="cat_finance_desc" class="text-xs text-slate-500 mt-1">Планирование бюджета, учет и финансовый рост</p>
+          </div>
+        </div>
+
+        <div class="light-card p-6 rounded-2xl flex items-start gap-4">
+          <span class="text-3xl shrink-0 p-2 rounded-xl bg-slate-50 border border-slate-100">💪</span>
+          <div>
+            <h4 data-i18n="cat_sport" class="font-bold text-base text-slate-900">Спорт и Здоровье</h4>
+            <p data-i18n="cat_sport_desc" class="text-xs text-slate-500 mt-1">Тренировки, прогулки, тонус тела и энергия</p>
+          </div>
+        </div>
+
+        <div class="light-card p-6 rounded-2xl flex items-start gap-4">
+          <span class="text-3xl shrink-0 p-2 rounded-xl bg-slate-50 border border-slate-100">👪</span>
+          <div>
+            <h4 data-i18n="cat_family" class="font-bold text-base text-slate-900">Семья и Друзья</h4>
+            <p data-i18n="cat_family_desc" class="text-xs text-slate-500 mt-1">Время с любимыми, тепло общения и поддержка</p>
+          </div>
+        </div>
+
+        <div class="light-card p-6 rounded-2xl flex items-start gap-4">
+          <span class="text-3xl shrink-0 p-2 rounded-xl bg-slate-50 border border-slate-100">🌴</span>
+          <div>
+            <h4 data-i18n="cat_rest" class="font-bold text-base text-slate-900">Отдых и Сон</h4>
+            <p data-i18n="cat_rest_desc" class="text-xs text-slate-500 mt-1">Восстановление сил, здоровый сон и тишина</p>
+          </div>
+        </div>
+
+        <div class="light-card p-6 rounded-2xl flex items-start gap-4">
+          <span class="text-3xl shrink-0 p-2 rounded-xl bg-slate-50 border border-slate-100">⏳</span>
+          <div>
+            <h4 data-i18n="cat_waste" class="font-bold text-base text-slate-900">Потери времени</h4>
+            <p data-i18n="cat_waste_desc" class="text-xs text-slate-500 mt-1">Честный взгляд на соцсети, суету и пустые дела</p>
+          </div>
+        </div>
+
+        <div class="light-card p-6 rounded-2xl flex items-start gap-4">
+          <span class="text-3xl shrink-0 p-2 rounded-xl bg-slate-50 border border-slate-100">🏠</span>
+          <div>
+            <h4 data-i18n="cat_base" class="font-bold text-base text-slate-900">Базовые и Быт</h4>
+            <p data-i18n="cat_base_desc" class="text-xs text-slate-500 mt-1">Дорога, домашние дела, питание и ежедневная рутина</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. PRICING SECTION
+       ========================================================================= -->
+  <section id="pro" class="py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-xs font-semibold">
+          <span data-i18n="pro_badge">ASR PRO</span>
+        </div>
+        <h2 data-i18n="pro_title" class="text-3xl sm:text-4xl font-extrabold text-slate-900">
+          Память о вашем пути и уверенность на всех устройствах
+        </h2>
+        <p data-i18n="pro_subtitle" class="text-slate-600 text-base">
+          Для тех, кто хочет сберечь каждый прожитый день, сохранить воспоминания на долгие годы и синхронизировать историю между всеми смартфонами и планшетами.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        
+        <!-- Free Tier -->
+        <div class="light-card p-8 sm:p-10 rounded-3xl space-y-8 flex flex-col justify-between">
+          <div class="space-y-6">
+            <div>
+              <h3 data-i18n="pro_free_title" class="text-xl font-bold text-slate-900">Free Версия</h3>
+              <p class="text-xs text-slate-500 mt-1">Полноценный учет на вашем телефоне</p>
+            </div>
+
+            <div class="flex items-baseline gap-2">
+              <span data-i18n="pro_free_price" class="text-4xl font-extrabold text-slate-900">0 ₽</span>
+              <span data-i18n="pro_free_period" class="text-xs text-slate-500">Бесплатно навсегда</span>
+            </div>
+
+            <ul class="space-y-3 text-sm text-slate-600 pt-4 border-t border-slate-100">
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                <span data-i18n="pro_free_1">Полный непрерывный учет времени 24/7</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                <span data-i18n="pro_free_2">Фото-хронология и личный дневник</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                <span data-i18n="pro_free_3">Круговая аналитика баланса сфер</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                <span data-i18n="pro_free_4">Инструмент разделения записей Split Entry</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                <span data-i18n="pro_free_5">Цели, намерения и рубежи (без ограничений)</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                <span data-i18n="pro_free_6">Экспорт истории в формате CSV</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                <span data-i18n="pro_free_7">До 3 близких друзей в Сообществе</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href="#download" data-i18n="pro_free_btn" class="btn-soft w-full py-3.5 rounded-2xl text-center font-bold text-sm block">
+            Начать бесплатно
+          </a>
+        </div>
+
+        <!-- PRO Tier -->
+        <div class="light-card p-8 sm:p-10 rounded-3xl space-y-8 border-slate-900 bg-slate-900 text-white flex flex-col justify-between shadow-xl">
+          <div class="space-y-6">
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 data-i18n="pro_plus_title" class="text-xl font-bold text-white flex items-center gap-2">
+                  ASR PRO <i data-lucide="sparkles" class="w-4 h-4 text-amber-400"></i>
+                </h3>
+                <p class="text-xs text-slate-400 mt-1">Облачная синхронизация и полный аудит</p>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-white/10 text-xs font-bold text-white">Рекомендуем</span>
+            </div>
+
+            <div class="flex items-baseline gap-2">
+              <span data-i18n="pro_plus_price" class="text-4xl font-extrabold text-white">249 ₽</span>
+              <span data-i18n="pro_plus_period" class="text-xs text-slate-400">/ месяц или 1 990 ₽/год</span>
+            </div>
+
+            <ul class="space-y-3 text-sm text-slate-300 pt-4 border-t border-slate-800">
+              <li class="flex items-center gap-3 font-semibold text-white">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                <span data-i18n="pro_plus_1">Все возможности Free версии</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                <span data-i18n="pro_plus_2">⚡ Мгновенная облачная синхронизация на смартфонах и планшетах</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                <span data-i18n="pro_plus_3">☁️ Облачное сохранение фото, заметок и мыслей — ваша тёплая ностальгия и память через годы</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                <span data-i18n="pro_plus_4">📄 Элегантные PDF-отчёты для глубокого анализа года и личного аудита</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                <span data-i18n="pro_plus_5">👥 Безлимитный круг близких друзей и совместная поддержка</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href="#download" data-i18n="pro_plus_btn" class="w-full py-3.5 rounded-2xl text-center font-bold text-sm bg-white text-slate-900 hover:bg-slate-100 transition block">
+            Подключить PRO
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. FAQ SECTION
+       ========================================================================= -->
+  <section id="faq" class="py-24 bg-white border-t border-b border-slate-200/80">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-xs font-semibold">
+          <span data-i18n="faq_badge">Вопросы и ответы</span>
+        </div>
+        <h2 data-i18n="faq_title" class="text-3xl sm:text-4xl font-extrabold text-slate-900">
+          Всё, что важно знать об ASR
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        
+        <div class="faq-item light-card rounded-2xl overflow-hidden transition">
+          <button class="faq-trigger w-full p-6 text-left flex items-center justify-between gap-4">
+            <span data-i18n="faq_q1" class="font-bold text-base text-slate-900">Как устроен учет времени во время сна или отдыха?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-500 shrink-0 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+            <span data-i18n="faq_a1">В ASR все 24 часа дня одинаково ценны. Отдых и сон так же важны, как и работа. Когда вы ложитесь спать, просто выберите «Отдых». А если вы забыли переключить категорию, функция Split Entry позволит разрезать запись на две части за пару секунд.</span>
+          </div>
+        </div>
+
+        <div class="faq-item light-card rounded-2xl overflow-hidden transition">
+          <button class="faq-trigger w-full p-6 text-left flex items-center justify-between gap-4">
+            <span data-i18n="faq_q2" class="font-bold text-base text-slate-900">Работает ли приложение без интернета?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-500 shrink-0 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+            <span data-i18n="faq_a2">Да, на 100%! ASR создан по принципу offline-first. Все записи хранятся во встроенной локальной базе Isar на вашем телефоне. Приложение мгновенно открывается в самолете, поездках и без сотовой сети.</span>
+          </div>
+        </div>
+
+        <div class="faq-item light-card rounded-2xl overflow-hidden transition">
+          <button class="faq-trigger w-full p-6 text-left flex items-center justify-between gap-4">
+            <span data-i18n="faq_q3" class="font-bold text-base text-slate-900">Как защищены мои личные данные и фотографии?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-500 shrink-0 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+            <span data-i18n="faq_a3">Все данные хранятся локально на вашем смартфоне. Для подписчиков PRO облачная копия шифруется и защищается протоколами PostgreSQL Row-Level Security — доступ есть только у вашего аккаунта.</span>
+          </div>
+        </div>
+
+        <div class="faq-item light-card rounded-2xl overflow-hidden transition">
+          <button class="faq-trigger w-full p-6 text-left flex items-center justify-between gap-4">
+            <span data-i18n="faq_q4" class="font-bold text-base text-slate-900">На каких устройствах и языках доступен ASR?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-500 shrink-0 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+            <span data-i18n="faq_a4">ASR доступен на iOS (App Store) и Android (Google Play) на 8 языках: русском, кыргызском, английском, арабском, турецком, немецком, испанском и португальском.</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       8. DOWNLOAD CTA
+       ========================================================================= -->
+  <section id="download" class="py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
+      <div class="light-card p-10 sm:p-16 rounded-3xl space-y-8 bg-slate-900 text-white shadow-2xl">
+        <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-white mx-auto">
+          <i data-lucide="heart-handshake" class="w-7 h-7"></i>
+        </div>
+
+        <div class="space-y-3">
+          <h2 data-i18n="cta_title" class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+            Начните проживать каждый день с ясностью и теплом.
+          </h2>
+          <p data-i18n="cta_desc" class="text-slate-300 text-base sm:text-lg max-w-xl mx-auto">
+            Почувствуйте, насколько легко и естественно управлять своим временем без стресса и суеты.
+          </p>
+        </div>
+
+        <!-- Store Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          <a href="#" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white text-slate-900 hover:bg-slate-100 transition font-bold text-sm flex items-center justify-center gap-3">
+            <i data-lucide="apple" class="w-5 h-5"></i>
+            <div class="text-left">
+              <div class="text-[10px] uppercase opacity-70">Скачать в</div>
+              <div class="text-sm font-extrabold leading-tight">App Store</div>
+            </div>
+          </a>
+
+          <a href="#" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white/10 hover:bg-white/20 text-white border border-white/20 transition font-bold text-sm flex items-center justify-center gap-3">
+            <i data-lucide="play" class="w-5 h-5"></i>
+            <div class="text-left">
+              <div class="text-[10px] uppercase opacity-70">Доступно в</div>
+              <div class="text-sm font-extrabold leading-tight">Google Play</div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       9. FOOTER
+       ========================================================================= -->
+  <footer class="py-12 bg-white border-t border-slate-200/80 text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center gap-3">
+        <div class="w-7 h-7 rounded-xl bg-slate-900 text-white font-bold flex items-center justify-center text-xs">
+          A
+        </div>
+        <span class="font-bold text-slate-800">ASR Mindful Flow</span>
+        <span data-i18n="footer_rights">© 2026 ASR App. Все права защищены.</span>
+      </div>
+
+      <div class="flex items-center gap-6 text-slate-600 font-medium">
+        <a href="../PRIVACY_POLICY.md" data-i18n="footer_privacy" class="hover:text-slate-900 transition">Политика конфиденциальности</a>
+        <a href="../TERMS_OF_SERVICE.md" data-i18n="footer_terms" class="hover:text-slate-900 transition">Условия использования</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

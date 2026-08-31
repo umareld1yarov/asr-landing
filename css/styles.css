@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   ASR Landing Page - Clean, Minimalist & Mindful Light Theme
+   ========================================================================== */
+
+:root {
+  --bg-main: #FAFAF9;
+  --bg-card: #FFFFFF;
+  --text-title: #0F172A;
+  --text-body: #475569;
+  --text-muted: #94A3B8;
+  --border-light: #E2E8F0;
+  --border-card: rgba(0, 0, 0, 0.06);
+  --accent-teal: #0D9488;
+  --accent-cyan: #0284C7;
+  --accent-dark: #0F172A;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-title);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Elegant Light Cards */
+.light-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.04), 0 2px 6px -2px rgba(0, 0, 0, 0.02);
+  transition: all 0.25s ease-in-out;
+}
+
+.light-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Primary Button */
+.btn-dark {
+  background: #0F172A;
+  color: #FFFFFF;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15);
+}
+
+.btn-dark:hover {
+  background: #1E293B;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.25);
+}
+
+.btn-soft {
+  background: #F1F5F9;
+  color: #1E293B;
+  border: 1px solid #E2E8F0;
+  transition: all 0.2s ease;
+}
+
+.btn-soft:hover {
+  background: #E2E8F0;
+  color: #0F172A;
+  transform: translateY(-1px);
+}
+
+/* Real Phone Frame - Optimized for Full-Height Native Screenshot */
+.device-frame-container {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  border-radius: 46px;
+  padding: 10px;
+  background: linear-gradient(145deg, #2D3748 0%, #1A202C 100%);
+  box-shadow: 
+    0 25px 60px -15px rgba(15, 23, 42, 0.25),
+    0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+}
+
+.device-screen-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 38px;
+  overflow: hidden;
+  background: #0A0A0A;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.8);
+}
+
+.device-screen-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Subtle Gradient Glow for Light Theme */
+.ambient-light-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(2, 132, 199, 0.06) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+.ambient-warm-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+}

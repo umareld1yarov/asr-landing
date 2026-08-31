@@ -137,7 +137,7 @@ const translations = {
     cta_desc: "Experience how easy it is to manage your time without pressure, stress, or stopwatch anxiety.",
     cta_btn: "Download ASR Today",
 
-    footer_rights: "© 2026 ASR: Focus & Time Journal. All rights reserved.",
+    footer_rights: "© 2026 NAIZA Technologies. All rights reserved. ASR is a product of NAIZA Technologies.",
     footer_privacy: "Privacy Policy",
     footer_terms: "Terms of Service"
   },
@@ -259,7 +259,7 @@ const translations = {
     cta_desc: "Почувствуйте, насколько легко и естественно управлять своим временем без стресса и суеты.",
     cta_btn: "Скачать ASR сейчас",
 
-    footer_rights: "© 2026 ASR: Focus & Time Journal. Все права защищены.",
+    footer_rights: "© 2026 NAIZA Technologies. Все права защищены. ASR — продукт NAIZA Technologies.",
     footer_privacy: "Политика конфиденциальности",
     footer_terms: "Условия использования"
   }

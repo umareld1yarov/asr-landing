@@ -1,13 +1,21 @@
 /**
- * ASR Landing Page - Mindful & Clean Theme Logic
+ * ASR Landing Page - Mindful & Clean Theme Logic (Multi-Language + Dynamic Screenshots)
  */
 
 const screenImages = {
-  focus: "assets/images/real_screen_focus.png",
-  feed: "assets/images/real_screen_feed.png",
-  stats: "assets/images/real_screen_stats.png",
+  ru: {
+    focus: "assets/images/ru_focus.png",
+    feed: "assets/images/ru_feed.png",
+    stats: "assets/images/ru_stats.png",
+  },
+  en: {
+    focus: "assets/images/en_focus.png",
+    feed: "assets/images/en_feed.png",
+    stats: "assets/images/en_stats.png",
+  }
 };
 
+let currentLang = 'ru';
 let currentScreen = 'focus';
 
 const translations = {
@@ -257,7 +265,19 @@ const translations = {
   }
 };
 
-let currentLang = 'ru';
+function updatePhoneScreenshot() {
+  const phoneImg = document.getElementById('hero-phone-screen');
+  if (!phoneImg) return;
+  const targetSrc = screenImages[currentLang] && screenImages[currentLang][currentScreen] 
+    ? screenImages[currentLang][currentScreen] 
+    : screenImages['ru']['focus'];
+
+  phoneImg.style.opacity = '0.2';
+  setTimeout(() => {
+    phoneImg.src = targetSrc;
+    phoneImg.style.opacity = '1';
+  }, 120);
+}
 
 function setLanguage(lang) {
   currentLang = lang;
@@ -279,18 +299,13 @@ function setLanguage(lang) {
       el.innerHTML = translations[lang][key];
     }
   });
+
+  updatePhoneScreenshot();
 }
 
 function switchHeroScreen(screenId) {
   currentScreen = screenId;
-  const phoneImg = document.getElementById('hero-phone-screen');
-  if (!phoneImg || !screenImages[screenId]) return;
-
-  phoneImg.style.opacity = '0.2';
-  setTimeout(() => {
-    phoneImg.src = screenImages[screenId];
-    phoneImg.style.opacity = '1';
-  }, 120);
+  updatePhoneScreenshot();
 
   document.querySelectorAll('.screen-tab-btn').forEach(btn => {
     if (btn.dataset.screen === screenId) {

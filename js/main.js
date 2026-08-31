@@ -48,6 +48,8 @@ const translations = {
     stat_4_lbl: "Available Worldwide",
 
     phil_badge: "The Philosophy of Time",
+    phil_quote_text: "“O son of Adam! Truly, you are but a number of days. Whenever a day passes, a part of you departs.”",
+    phil_quote_author: "Al-Hasan al-Basri",
     phil_title: "Time cannot be paused. But it can be lived with peace and intention.",
     phil_subtitle: "Most trackers treat time like a stopwatch with stressful start and stop buttons. But life never stops. It transitions naturally from meaningful work to prayer, study, sports, and restful moments with family.",
     phil_card_1_title: "Zero Start/Stop Friction",
@@ -150,7 +152,7 @@ const translations = {
     nav_download: "Скачать ASR",
 
     hero_badge: "Осознанность и ценность каждого дня",
-    hero_title_1: "Время — это то, из чего соткана жизнь.",
+    hero_title_1: "Время — это и есть ваша жизнь.",
     hero_title_2: "Проживайте каждую минуту бережно.",
     hero_desc: "ASR — это спокойный, непрерывный трекер времени, созданный для внутренней гармонии и ясности. Без стресса, без кнопок «Стоп» — только честный и легкий взгляд на то, куда уходят ваши дни.",
     hero_cta_download: "Скачать для iOS и Android",
@@ -170,6 +172,8 @@ const translations = {
     stat_4_lbl: "Доступен по всему миру",
 
     phil_badge: "Философия времени",
+    phil_quote_text: "«О сын Адама! Поистине, ты состоишь из дней. И когда уходит день — уходит часть тебя.»",
+    phil_quote_author: "Аль-Хасан аль-Басри",
     phil_title: "Время нельзя остановить или накопить. Но им можно жить осознанно.",
     phil_subtitle: "Обычные приложения превращают жизнь в секундомер с кнопками «Старт» и «Стоп». Но жизнь никогда не замирает — она непрерывно перетекает от работы к молитве, от учебы к спорту, от важных дел к отдыху и теплому общению с семьей.",
     phil_card_1_title: "Без стресса и суеты",

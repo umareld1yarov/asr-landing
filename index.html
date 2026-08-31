@@ -208,16 +208,33 @@
           </div>
         </div>
 
-        <!-- Right Hero: Real Smartphone Screenshot in Full Glory -->
-        <div class="lg:col-span-5 flex justify-center items-center">
+        <!-- Right Hero: Real Smartphone Screenshot with Interactive Screen Switcher -->
+        <div class="lg:col-span-5 flex flex-col items-center justify-center space-y-4">
           <div class="device-frame-container">
             <div class="device-screen-wrapper">
               <img 
+                id="hero-phone-screen"
                 src="assets/images/real_screen_focus.png" 
-                alt="ASR Application Focus Screen" 
-                class="device-screen-img"
+                alt="ASR Application Real Screen" 
+                class="device-screen-img transition-opacity duration-200"
               />
             </div>
+          </div>
+
+          <!-- Interactive Screen Switcher Pills -->
+          <div class="flex items-center justify-center gap-1.5 p-1.5 rounded-2xl bg-white border border-slate-200 shadow-sm text-xs font-bold">
+            <button data-screen="focus" class="screen-tab-btn px-3.5 py-1.5 rounded-xl transition bg-slate-900 text-white shadow-sm flex items-center gap-1.5">
+              <span>⏱️</span>
+              <span data-i18n="tab_focus">Фокус</span>
+            </button>
+            <button data-screen="feed" class="screen-tab-btn px-3.5 py-1.5 rounded-xl transition text-slate-600 hover:text-slate-900 flex items-center gap-1.5">
+              <span>📸</span>
+              <span data-i18n="tab_feed">Лента дня</span>
+            </button>
+            <button data-screen="stats" class="screen-tab-btn px-3.5 py-1.5 rounded-xl transition text-slate-600 hover:text-slate-900 flex items-center gap-1.5">
+              <span>📊</span>
+              <span data-i18n="tab_stats">Статистика</span>
+            </button>
           </div>
         </div>
 

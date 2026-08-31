@@ -2,6 +2,14 @@
  * ASR Landing Page - Mindful & Clean Theme Logic
  */
 
+const screenImages = {
+  focus: "assets/images/real_screen_focus.png",
+  feed: "assets/images/real_screen_feed.png",
+  stats: "assets/images/real_screen_stats.png",
+};
+
+let currentScreen = 'focus';
+
 const translations = {
   en: {
     nav_philosophy: "Philosophy",
@@ -17,6 +25,10 @@ const translations = {
     hero_desc: "ASR is a calm, continuous time tracker created to bring balance and peace of mind to your daily routine. No complicated timers, no pressure — just an honest, gentle view of where your life flows.",
     hero_cta_download: "Download for iOS & Android",
     hero_cta_learn: "Discover How It Works",
+
+    tab_focus: "Focus",
+    tab_feed: "Timeline Feed",
+    tab_stats: "Statistics",
 
     stat_1_val: "Continuous",
     stat_1_lbl: "Effortless 24/7 Flow",
@@ -135,6 +147,10 @@ const translations = {
     hero_desc: "ASR — это спокойный, непрерывный трекер времени, созданный для внутренней гармонии и ясности. Без стресса, без кнопок «Стоп» — только честный и легкий взгляд на то, куда уходят ваши дни.",
     hero_cta_download: "Скачать для iOS и Android",
     hero_cta_learn: "Узнать философию ASR",
+
+    tab_focus: "Фокус",
+    tab_feed: "Лента дня",
+    tab_stats: "Статистика",
 
     stat_1_val: "Непрерывный",
     stat_1_lbl: "Плавный поток 24/7",
@@ -265,6 +281,28 @@ function setLanguage(lang) {
   });
 }
 
+function switchHeroScreen(screenId) {
+  currentScreen = screenId;
+  const phoneImg = document.getElementById('hero-phone-screen');
+  if (!phoneImg || !screenImages[screenId]) return;
+
+  phoneImg.style.opacity = '0.2';
+  setTimeout(() => {
+    phoneImg.src = screenImages[screenId];
+    phoneImg.style.opacity = '1';
+  }, 120);
+
+  document.querySelectorAll('.screen-tab-btn').forEach(btn => {
+    if (btn.dataset.screen === screenId) {
+      btn.classList.add('bg-slate-900', 'text-white', 'shadow-sm');
+      btn.classList.remove('text-slate-600', 'hover:text-slate-900');
+    } else {
+      btn.classList.remove('bg-slate-900', 'text-white', 'shadow-sm');
+      btn.classList.add('text-slate-600', 'hover:text-slate-900');
+    }
+  });
+}
+
 function setupFaqAccordion() {
   document.querySelectorAll('.faq-item').forEach(item => {
     const trigger = item.querySelector('.faq-trigger');
@@ -311,6 +349,12 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       setLanguage(btn.dataset.lang);
+    });
+  });
+
+  document.querySelectorAll('.screen-tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      switchHeroScreen(btn.dataset.screen);
     });
   });
 });

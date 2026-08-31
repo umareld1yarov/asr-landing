@@ -1,6 +1,6 @@
-# ASR — Landing Page & Fastlane Marketing Asset
+# ASR: Focus & Time Journal — Landing Page & Fastlane Marketing Asset
 
-Этот лендинг создан специально для презентации приложения **ASR (Mindful Time Tracker)** и генерации вирусных промо-видео / UGC-роликов в сервисе **Fastlane** ([usefastlane.ai](https://www.usefastlane.ai)).
+Этот лендинг создан специально для презентации приложения **ASR: Focus & Time Journal** и генерации вирусных промо-видео / UGC-роликов в сервисе **Fastlane** ([usefastlane.ai](https://www.usefastlane.ai)).
 
 ---
 

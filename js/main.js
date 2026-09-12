@@ -139,7 +139,8 @@ const translations = {
 
     footer_rights: "© 2026 NAIZA Technologies. All rights reserved. ASR is a product of NAIZA Technologies.",
     footer_privacy: "Privacy Policy",
-    footer_terms: "Terms of Service"
+    footer_terms: "Terms of Service",
+    footer_delete: "Delete Account"
   },
   ru: {
     nav_philosophy: "Философия",
@@ -261,7 +262,8 @@ const translations = {
 
     footer_rights: "© 2026 NAIZA Technologies. Все права защищены. ASR — продукт NAIZA Technologies.",
     footer_privacy: "Политика конфиденциальности",
-    footer_terms: "Условия использования"
+    footer_terms: "Условия использования",
+    footer_delete: "Удалить аккаунт"
   }
 };
 

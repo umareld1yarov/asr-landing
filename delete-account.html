@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete your ASR account and data</title>
+  <meta name="description" content="Request deletion of your ASR: Focus & Time Journal account and associated cloud data." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="icon" type="image/png" href="assets/images/app_icon.png" />
+  <link rel="apple-touch-icon" href="assets/images/app_icon.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-[#FAFAF9] text-slate-800 antialiased font-sans flex flex-col min-h-screen">
+  <header class="sticky top-0 z-40 bg-[#FAFAF9]/90 backdrop-blur-md border-b border-slate-200/80">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5 text-slate-900 font-extrabold text-lg tracking-tight hover:opacity-80 transition">
+        <img src="assets/images/app_icon.png" alt="ASR app icon" class="w-8 h-8 rounded-xl shadow-md object-cover overflow-hidden" />
+        <div>
+          <span class="font-extrabold text-lg tracking-tight text-slate-900 block leading-tight">ASR</span>
+          <span class="text-[10px] text-slate-500 block font-semibold tracking-wide">by NAIZA Technologies</span>
+        </div>
+      </a>
+
+      <div class="flex items-center gap-3">
+        <div class="flex items-center p-1 rounded-xl bg-slate-100 border border-slate-200 text-xs font-bold" aria-label="Language">
+          <button id="lang-en-btn" type="button" class="px-3 py-1 rounded-lg bg-slate-900 text-white shadow-sm transition" aria-pressed="true">EN</button>
+          <button id="lang-ru-btn" type="button" class="px-3 py-1 rounded-lg text-slate-600 hover:text-slate-900 transition" aria-pressed="false">RU</button>
+        </div>
+        <a href="index.html" class="text-xs font-bold text-slate-600 hover:text-slate-900 transition hidden sm:inline-flex items-center gap-1">
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5" aria-hidden="true"></i>
+          <span id="back-nav-text">Back to Home</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow py-10 sm:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <article id="doc-en" class="space-y-8 bg-white p-6 sm:p-12 rounded-3xl border border-slate-200/90 shadow-sm">
+        <div class="border-b border-slate-100 pb-7 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 border border-red-100 text-red-700 text-xs font-semibold">
+            <i data-lucide="user-x" class="w-3.5 h-3.5" aria-hidden="true"></i>
+            <span>Account deletion</span>
+          </div>
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Delete your ASR account and data</h1>
+          <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
+            This page is the official account deletion resource for <strong>ASR: Focus &amp; Time Journal</strong>, provided by <strong>NAIZA Technologies</strong>.
+          </p>
+          <p class="text-xs text-slate-500">Last updated: September 12, 2026</p>
+        </div>
+
+        <section class="rounded-3xl bg-slate-900 text-white p-6 sm:p-8 space-y-4">
+          <div class="flex items-start gap-3">
+            <i data-lucide="mail" class="w-6 h-6 mt-0.5 text-slate-300 shrink-0" aria-hidden="true"></i>
+            <div class="space-y-2">
+              <h2 class="text-xl font-bold">Request deletion by email</h2>
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed">Send the request from the email address linked to your ASR account. Keep the pre-filled subject so we can identify your request.</p>
+            </div>
+          </div>
+          <a href="mailto:asrfocustimejournal@gmail.com?subject=ASR%20account%20deletion%20request&amp;body=Please%20delete%20my%20ASR%20account%20and%20all%20associated%20cloud%20data.%0A%0AEmail%20used%20for%20the%20ASR%20account%3A%20%0A%0AI%20understand%20that%20this%20action%20is%20permanent." class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl bg-white px-6 py-3.5 text-sm font-bold text-slate-900 hover:bg-slate-100 transition focus:outline-none focus:ring-4 focus:ring-white/30">
+            <i data-lucide="send" class="w-4 h-4" aria-hidden="true"></i>
+            Email deletion request
+          </a>
+          <p class="text-xs text-slate-400">Support: asrfocustimejournal@gmail.com</p>
+        </section>
+
+        <section class="space-y-4">
+          <h2 class="text-xl font-bold text-slate-900">What happens next</h2>
+          <ol class="grid gap-3 sm:grid-cols-3 text-sm text-slate-600">
+            <li class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80"><strong class="block text-slate-900 mb-1">1. Send your request</strong>Use the account email so we can locate the correct account.</li>
+            <li class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80"><strong class="block text-slate-900 mb-1">2. Verify ownership</strong>We may reply with a limited verification request to protect your account.</li>
+            <li class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80"><strong class="block text-slate-900 mb-1">3. Data is deleted</strong>After verification, the account and associated ASR cloud data are permanently deleted.</li>
+          </ol>
+        </section>
+
+        <section class="space-y-3 pt-5 border-t border-slate-100">
+          <h2 class="text-xl font-bold text-slate-900">Data that will be deleted</h2>
+          <ul class="list-disc list-inside space-y-2 text-slate-600 text-sm sm:text-base pl-2">
+            <li>Your ASR account profile, email address, and authentication data.</li>
+            <li>Cloud-synced time entries, categories, goals, intentions, journal notes, and related metadata.</li>
+            <li>Photos and other files stored in your ASR cloud backup.</li>
+            <li>Cloud synchronization records associated with the account.</li>
+          </ul>
+        </section>
+
+        <section class="space-y-3 pt-5 border-t border-slate-100">
+          <h2 class="text-xl font-bold text-slate-900">Data that may remain outside ASR</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            ASR does not retain your account or associated cloud content after deletion. Purchase and subscription transaction records held by Google Play or the Apple App Store are controlled by those stores and are subject to their own legal and retention policies. We do not store your payment card details.
+          </p>
+        </section>
+
+        <section class="space-y-3 pt-5 border-t border-slate-100">
+          <h2 class="text-xl font-bold text-slate-900">Local data on your device</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Account deletion removes data stored in the ASR cloud. Offline data stored only on your phone is not accessible to NAIZA Technologies and cannot be removed remotely. Delete it in ASR before uninstalling, clear the app's storage in your device settings, or uninstall the app.
+          </p>
+        </section>
+
+        <section class="space-y-3 pt-5 border-t border-slate-100">
+          <h2 class="text-xl font-bold text-slate-900">Delete from the app</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">You can also start deletion inside ASR: <strong>Profile → Settings → Account → Delete Account &amp; Data</strong>. You do not need the app to use the email option on this page.</p>
+        </section>
+
+        <p class="text-sm text-slate-500">For more information, read the <a href="privacy.html" class="text-slate-900 underline font-semibold">ASR Privacy Policy</a>.</p>
+      </article>
+
+      <article id="doc-ru" class="space-y-8 bg-white p-6 sm:p-12 rounded-3xl border border-slate-200/90 shadow-sm hidden">
+        <div class="border-b border-slate-100 pb-7 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 border border-red-100 text-red-700 text-xs font-semibold">
+            <i data-lucide="user-x" class="w-3.5 h-3.5" aria-hidden="true"></i>
+            <span>Удаление аккаунта</span>
+          </div>
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Удаление аккаунта ASR и данных</h1>
+          <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
+            Это официальная страница удаления аккаунта <strong>ASR: Focus &amp; Time Journal</strong> от разработчика <strong>NAIZA Technologies</strong>.
+          </p>
+          <p class="text-xs text-slate-500">Последнее обновление: 12 сентября 2026 г.</p>
+        </div>
+
+        <section class="rounded-3xl bg-slate-900 text-white p-6 sm:p-8 space-y-4">
+          <div class="flex items-start gap-3">
+            <i data-lucide="mail" class="w-6 h-6 mt-0.5 text-slate-300 shrink-0" aria-hidden="true"></i>
+            <div class="space-y-2">
+              <h2 class="text-xl font-bold">Отправьте запрос по email</h2>
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed">Отправьте письмо с адреса, который привязан к аккаунту ASR. Сохраните тему письма, чтобы мы могли распознать запрос.</p>
+            </div>
+          </div>
+          <a href="mailto:asrfocustimejournal@gmail.com?subject=Запрос%20на%20удаление%20аккаунта%20ASR&amp;body=Прошу%20удалить%20мой%20аккаунт%20ASR%20и%20все%20связанные%20с%20ним%20облачные%20данные.%0A%0AEmail%2C%20использованный%20в%20ASR%3A%20%0A%0AЯ%20понимаю%2C%20что%20это%20действие%20необратимо." class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl bg-white px-6 py-3.5 text-sm font-bold text-slate-900 hover:bg-slate-100 transition focus:outline-none focus:ring-4 focus:ring-white/30">
+            <i data-lucide="send" class="w-4 h-4" aria-hidden="true"></i>
+            Отправить запрос на удаление
+          </a>
+          <p class="text-xs text-slate-400">Поддержка: asrfocustimejournal@gmail.com</p>
+        </section>
+
+        <section class="space-y-4">
+          <h2 class="text-xl font-bold text-slate-900">Что произойдёт дальше</h2>
+          <ol class="grid gap-3 sm:grid-cols-3 text-sm text-slate-600">
+            <li class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80"><strong class="block text-slate-900 mb-1">1. Отправьте запрос</strong>Используйте email аккаунта, чтобы мы нашли нужную учётную запись.</li>
+            <li class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80"><strong class="block text-slate-900 mb-1">2. Подтвердите владение</strong>Для защиты аккаунта мы можем запросить минимальное подтверждение.</li>
+            <li class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80"><strong class="block text-slate-900 mb-1">3. Данные удаляются</strong>После проверки аккаунт и связанные облачные данные ASR удаляются безвозвратно.</li>
+          </ol>
+        </section>
+
+        <section class="space-y-3 pt-5 border-t border-slate-100">
+          <h2 class="text-xl font-bold text-slate-900">Какие данные будут удалены</h2>
+          <ul class="list-disc list-inside space-y-2 text-slate-600 text-sm sm:text-base pl-2">
+            <li>Профиль аккаунта ASR, адрес электронной почты и данные авторизации.</li>
+            <li>Синхронизированные записи времени, категории, цели, намерения, заметки дневника и связанные метаданные.</li>
+            <li>Фотографии и другие файлы из облачной резервной копии ASR.</li>
+            <li>Записи облачной синхронизации, связанные с аккаунтом.</li>
+          </ul>
+        </section>
+
+        <section class="space-y-3 pt-5 border-t border-slate-100">
+          <h2 class="text-xl font-bold text-slate-900">Какие данные могут остаться вне ASR</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            После удаления ASR не сохраняет аккаунт и связанный с ним облачный контент. Данные о покупках и подписках, которые хранят Google Play или Apple App Store, контролируются этими магазинами и обрабатываются по их собственным правилам и срокам хранения. Мы не храним данные банковских карт.
+          </p>
+        </section>
+
+        <section class="space-y-3 pt-5 border-t border-slate-100">
+          <h2 class="text-xl font-bold text-slate-900">Локальные данные на устройстве</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Удаление аккаунта стирает данные из облака ASR. Офлайн-данные, которые хранятся только на телефоне, недоступны NAIZA Technologies и не могут быть удалены удалённо. Удалите их в ASR до удаления приложения, очистите хранилище приложения в настройках устройства или удалите приложение.
+          </p>
+        </section>
+
+        <section class="space-y-3 pt-5 border-t border-slate-100">
+          <h2 class="text-xl font-bold text-slate-900">Удаление в приложении</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">Запрос также можно отправить в ASR: <strong>Профиль → Настройки → Аккаунт → Удалить аккаунт и данные</strong>. Для отправки запроса по email с этой страницы устанавливать приложение не нужно.</p>
+        </section>
+
+        <p class="text-sm text-slate-500">Подробнее — в <a href="privacy.html" class="text-slate-900 underline font-semibold">Политике конфиденциальности ASR</a>.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="bg-white border-t border-slate-200/80 py-8 text-center text-xs text-slate-500">
+    <div class="max-w-4xl mx-auto px-4 space-y-3">
+      <nav class="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 font-semibold text-slate-600" aria-label="Legal links">
+        <a href="index.html" class="hover:text-slate-900 transition">Главная / Home</a>
+        <a href="privacy.html" class="hover:text-slate-900 transition">Privacy Policy</a>
+        <a href="terms.html" class="hover:text-slate-900 transition">Terms of Service</a>
+        <a href="delete-account.html" class="text-slate-900 font-bold">Delete Account</a>
+      </nav>
+      <p>© 2026 NAIZA Technologies. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    const enBtn = document.getElementById('lang-en-btn');
+    const ruBtn = document.getElementById('lang-ru-btn');
+    const docEn = document.getElementById('doc-en');
+    const docRu = document.getElementById('doc-ru');
+    const backNav = document.getElementById('back-nav-text');
+
+    function setDocLang(lang) {
+      const isRussian = lang === 'ru';
+      document.documentElement.lang = lang;
+      docEn.classList.toggle('hidden', isRussian);
+      docRu.classList.toggle('hidden', !isRussian);
+      enBtn.classList.toggle('bg-slate-900', !isRussian);
+      enBtn.classList.toggle('text-white', !isRussian);
+      enBtn.classList.toggle('shadow-sm', !isRussian);
+      enBtn.classList.toggle('text-slate-600', isRussian);
+      ruBtn.classList.toggle('bg-slate-900', isRussian);
+      ruBtn.classList.toggle('text-white', isRussian);
+      ruBtn.classList.toggle('shadow-sm', isRussian);
+      ruBtn.classList.toggle('text-slate-600', !isRussian);
+      enBtn.setAttribute('aria-pressed', String(!isRussian));
+      ruBtn.setAttribute('aria-pressed', String(isRussian));
+      backNav.textContent = isRussian ? 'На главную' : 'Back to Home';
+      document.title = isRussian ? 'Удалить аккаунт ASR и данные' : 'Delete your ASR account and data';
+    }
+
+    enBtn.addEventListener('click', () => setDocLang('en'));
+    ruBtn.addEventListener('click', () => setDocLang('ru'));
+  </script>
+</body>
+</html>

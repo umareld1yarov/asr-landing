@@ -51,7 +51,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
   
   <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/images/app_icon.png" />
@@ -84,6 +84,10 @@
 </head>
 
 <body class="bg-[#FAFAF9] text-slate-900 font-sans antialiased overflow-x-hidden relative selection:bg-slate-900 selection:text-white">
+
+  <div id="scroll-progress"></div>
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="grain" aria-hidden="true"></div>
 
   <!-- Soft Ambient Background Gradients -->
   <div class="fixed top-0 left-1/3 w-[600px] h-[600px] ambient-light-glow pointer-events-none -z-10 blur-3xl"></div>
@@ -163,14 +167,14 @@
           
           <!-- Gentle Badge -->
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-xs sm:text-sm font-semibold shadow-sm">
-            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            <span class="pulse-dot w-2 h-2 rounded-full bg-emerald-500"></span>
             <span data-i18n="hero_badge">Осознанность и ценность каждого дня</span>
           </div>
 
           <!-- Main Headings: Quote by Al-Hasan al-Basri -->
           <div class="space-y-3">
             <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.25]">
-              <span data-i18n="hero_title_1" class="block">«О сын Адама! Поистине, ты состоишь из дней. И когда уходит день — уходит часть тебя.»</span>
+              <span data-i18n="hero_title_1" class="block text-gradient">«О сын Адама! Поистине, ты состоишь из дней. И когда уходит день — уходит часть тебя.»</span>
               <span data-i18n="hero_title_2" class="block text-slate-600 font-serif italic font-normal text-2xl sm:text-3xl mt-2">— Аль-Хасан аль-Басри</span>
             </h1>
           </div>
@@ -179,6 +183,12 @@
           <p data-i18n="hero_desc" class="text-base sm:text-lg text-slate-600 font-normal max-w-xl mx-auto lg:mx-0 leading-relaxed">
             ASR — это спокойный, непрерывный трекер времени, созданный для внутренней гармонии и ясности. Без стресса, без кнопок «Стоп» — только честный и легкий взгляд на то, куда уходят ваши дни.
           </p>
+
+          <!-- Live Day Progress -->
+          <div class="light-card inline-flex items-center gap-4 px-4 py-3 rounded-2xl text-left max-w-md mx-auto lg:mx-0">
+            <div id="day-ring" class="day-ring"><b>0%</b></div>
+            <div id="day-left" class="text-sm font-semibold text-slate-700 leading-snug"></div>
+          </div>
 
           <!-- Action Buttons -->
           <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
@@ -215,15 +225,17 @@
 
         <!-- Right Hero: Real Smartphone Screenshot with Interactive Screen Switcher -->
         <div class="lg:col-span-5 flex flex-col items-center justify-center space-y-4">
+          <div class="phone-stage phone-float w-full">
           <div class="device-frame-container">
             <div class="device-screen-wrapper">
-              <img 
+              <img
                 id="hero-phone-screen"
                 src="assets/images/ru_focus.png" 
                 alt="ASR Application Real Screen" 
                 class="device-screen-img transition-opacity duration-200"
               />
             </div>
+          </div>
           </div>
 
           <!-- Interactive Screen Switcher Pills -->
@@ -739,6 +751,7 @@
 
   <!-- Scripts -->
   <script src="js/main.js"></script>
+  <script src="js/enhance.js"></script>
   <script>
     lucide.createIcons();
   </script>
